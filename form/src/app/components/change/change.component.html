@@ -1,0 +1,14 @@
+<h2>Zmiana hasła</h2>
+<form (ngSubmit)="changePassword()">
+    <label for="username">Nazwa użytkownika:</label>
+    <input type="text" [(ngModel)]="user.username" name="username" required /><br>
+  
+    <label for="password">Nowe hasło:</label>
+    <input type="password" [(ngModel)]="user.password" name="password" required /><br>
+  
+    <label for="confirmPassword">Potwierdź hasło:</label>
+    <input type="password" [(ngModel)]="user.confirmPassword" name="confirmPassword" required /><br>
+  
+    <button type="submit">Zmień hasło</button>
+  </form>
+  

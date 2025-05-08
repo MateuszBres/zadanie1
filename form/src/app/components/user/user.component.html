@@ -1,0 +1,30 @@
+<button (click)="logout()">logout</button>
+<br>
+<br>
+<button (click)="change()">change password</button>
+<h2>Lista użytkowników</h2>
+<table border="solid">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Imię</th>
+      <th>Nazwisko</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Registration</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.lastname }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.registrationDate | date:'short' }}</td>
+      <td>{{ user.status }}</td>
+    </tr>
+  </tbody>
+</table> 
+
